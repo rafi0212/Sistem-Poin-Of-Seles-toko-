@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receipt</title>
+  <style>
+    body {
+      background-color: #ffffff00;
+      font-family: 'Arial', sans-serif;
+      width: 75mm; /* Lebar struk */
+      height: 65mm; /* Tinggi struk */
+      padding: 5mm; /* Jarak dari tepi */
+      margin: 0;
+      box-sizing: border-box; /* Untuk memastikan padding diperhitungkan dalam lebar */
+    }
+
+    .receipt {
+      background-color: #ffffff;
+      width: 100%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Spasi antara header, content, dan footer */
+      height: 100%;
+    }
+
+    .header {
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 5px; /* Mengurangi jarak di bawah header */
+    }
+
+    .header .store-name {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .header .store-address {
+      font-size: 10px;
+    }
+
+    .receipt .line {
+      border-top: 1px dashed black;
+      margin: 5px 0;
+    }
+
+    .content {
+      font-size: 12px;
+      margin: 5px 0; /* Mengurangi jarak di antara item */
+    }
+
+    .content .item {
+      display: flex;
+      justify-content: space-between;
+      padding: 2px 0; /* Jarak antara item */
+    }
+
+    .content .item span {
+      display: inline-block;
+    }
+
+    .total {
+      font-weight: bold;
+    }
+
+    .footer {
+      font-size: 10px;
+      text-align: center;
+      margin-top: 5px; /* Mengurangi jarak di atas footer */
+    }
+  </style>
+</head>
+<body>
+  <div class="receipt">
+    <!-- Header -->
+    <div class="header">
+      <div class="store-name">TOKO XYZ </div>
+      <div class="store-address">
+        Jl. Raya No. 123, Jakarta<br>
+        Telp: (021) 12345678
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <!-- Transaction Info -->
+    <div class="content">
+      <div class="item">
+        <span>Tanggal</span>
+        <span>20 September 2024</span>
+      </div>
+      <div class="item">
+        <span>No. Transaksi</span>
+        <span>000123</span>
+      </div>
+      <div class="item">
+        <span>Nama customer</span>
+        <span>Ahmad</span>
+      </div>
+      <div class="line"></div>
+
+      <!-- Product List -->
+      <div class="item">
+        <span>Motor X</span>
+        <span>Rp 20.000.000</span>
+      </div>
+      <div class="item">
+        <span>Ban Mobil Y (2x)</span>
+        <span>Rp 3.000.000</span>
+      </div>
+      <div class="item">
+        <span>Helm Z</span>
+        <span>Rp 500.000</span>
+      </div>
+
+      <div class="line"></div>
+
+      <!-- Total -->
+      <div class="item total">
+        <span>Total</span>
+        <span>Rp 23.500.000</span>
+      </div>
+      <div class="item">
+        <span>Bayar</span>
+        <span>Rp 25.000.000</span>
+      </div>
+      <div class="item">
+        <span>Kembalian</span>
+        <span>Rp 1.500.000</span>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <!-- Footer -->
+    <div class="footer">
+      Terima Kasih atas Kunjungan Anda<br>
+      Barang yang sudah dibeli tidak dapat dikembalikan
+    </div>
+  </div>
+</body>
+</html>

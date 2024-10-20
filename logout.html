@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <script>
+        // Fungsi untuk logout
+        function logout() {
+            // Menghapus informasi login dari sessionStorage atau localStorage
+            sessionStorage.removeItem("userToken");  // Jika menggunakan sessionStorage
+            localStorage.removeItem("userToken");    // Jika menggunakan localStorage
+            
+            // Redirect ke halaman login
+            window.location.href = "index.html"; // Ganti dengan path halaman login yang sesuai
+        }
+
+        // Panggil fungsi logout saat halaman ini dibuka
+        window.onload = function() {
+            logout();
+        };
+    </script>
+</head>
+<body>
+    <p>Logging out... Please wait.</p>
+</body>
+</html>
